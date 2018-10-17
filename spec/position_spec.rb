@@ -8,7 +8,14 @@ describe Position do
 
       expect(position.go_to('NORTH')).to eq(Position.new(1, 2, 'NORTH'))
     end
-  end
 
+    it 'goes SOUTH' do
+      position = Position.new(1, 1, 'SOUTH')
+
+      expect(position.go_to('SOUTH')).to eq(Position.new(1, 0, 'SOUTH'))
+    end
+
+    
+  end
 
 end
