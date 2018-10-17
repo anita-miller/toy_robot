@@ -122,6 +122,32 @@ describe Robot do
         expect(robot.report).to eq('0,1,WEST')
       end
     end
+
+    context 'before being placed in a table' do
+      it 'ignores other commands' do
+        MoveCommand.new(robot, table).execute
+        LeftCommand.new(robot).execute
+        RightCommand.new(robot).execute
+
+        expect(robot.report).to eq('not in place')
+      end
+    end
+  end
+
+  describe '#placed?' do
+    context 'before robot is placed' do
+      it 'returns false' do
+        expect(robot.placed?).to be false
+      end
+    end
+
+    context 'after robot is placed' do
+      it 'returns true' do
+        PlaceCommand.new(robot, table, Position.new(1, 2, 'EAST')).execute
+
+        expect(robot.placed?).to be true
+      end
+    end
   end
 
 end
