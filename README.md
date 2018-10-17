@@ -91,3 +91,34 @@ developing your solution.
 Please engineer your solution to a standard you consider suitable for
 production. It is not required to provide any graphical output showing the
 movement of the toy robot.
+
+
+
+#RUNNING THE CODE
+#clone this repo
+  git clone git@github.com:anitanaseri/toy_robot.git
+#change to app directory
+  cd toy_robot
+  
+#to run the app
+    ```ruby main.rb```
+
+when giving it commands you should give the inputs one line at a time when it asks for directions .
+for example:
+
+    Hello I am Mr.Robot where do you want me to go?
+    please give me directions :) (EXIT to quit):
+    PLACE 0,0,NORTH
+    please give me directions :) (EXIT to quit):
+    MOVE
+    please give me directions :) (EXIT to quit):
+    REPORT
+    0,1,NORTH
+    please give me directions :) (EXIT to quit):
+
+
+
+#design details
+
+since we feed he robot commands from the terminal, i used the command pattern.
+Also used the Decorator Pattern for the movements

@@ -1,4 +1,4 @@
-require_relative 'lib/commander'
+require_relative 'lib/controller'
 require_relative 'lib/table'
 require_relative 'lib/robot'
 require_relative 'lib/position'
@@ -11,7 +11,7 @@ require_relative 'lib/report_command'
 # initializes a new 5x5 table, a new robot, and a new command interpreter
 table = Table.new(5, 5)
 robot = Robot.new
-commander = Commander.new(robot, table)
+controller = Controller.new(robot, table)
 
 puts "Hello I am Mr.Robot where do you want me to go?"
 
