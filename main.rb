@@ -21,7 +21,7 @@ loop do
 
   input = gets
 
-  command = commander.parse(input)
+  command = controller.parse(input)
 
   command.execute unless command.nil?
 
