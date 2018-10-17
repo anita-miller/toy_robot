@@ -1,0 +1,11 @@
+GEM
+  remote: https://rubygems.org/
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rspec (~> 3.3.0)
+
+BUNDLED WITH
+   1.16.6
