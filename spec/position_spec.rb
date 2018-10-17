@@ -21,6 +21,13 @@ describe Position do
       expect(position.go_to('EAST')).to eq(Position.new(2, 1, 'EAST'))
     end
 
+    it 'goes WEST' do
+      position = Position.new(1, 1, 'WEST')
+
+      expect(position.go_to('WEST')).to eq(Position.new(0, 1, 'WEST'))
+    end
   end
+
+
 
 end
