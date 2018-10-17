@@ -28,6 +28,13 @@ describe Position do
     end
   end
 
+  describe '#==' do
+    it 'returns true when coordinantes are the same in both positions' do
+      position_one = Position.new(1, 1, 'NORTH')
+      position_two = Position.new(1, 1, 'NORTH')
 
+      expect(position_one).to eq(position_two)
+    end
+  end
 
 end
