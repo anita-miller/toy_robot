@@ -37,4 +37,30 @@ describe Position do
     end
   end
 
+  describe '#direction_left' do
+    it 'when facing NORTH returns WEST' do
+      position = Position.new(1, 2, 'NORTH')
+
+      expect(position.direction_left).to eq('WEST')
+    end
+
+    it 'when facing WEST returns SOUTH' do
+      position = Position.new(1, 2, 'WEST')
+
+      expect(position.direction_left).to eq('SOUTH')
+    end
+
+    it 'when facing SOUTH returns EAST' do
+      position = Position.new(1, 2, 'SOUTH')
+
+      expect(position.direction_left).to eq('EAST')
+    end
+
+    it 'when facing EAST returns NORTH' do
+      position = Position.new(1, 2, 'EAST')
+
+      expect(position.direction_left).to eq('NORTH')
+    end
+  end
+
 end
